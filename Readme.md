@@ -67,10 +67,17 @@ Before using this project, ensure the following are installed:
 
 ## Directory Structure
 
-- `main.tf`: The main Terraform configuration file defining the resources.
-- `variables.tf`: The file to define variables for your configuration.
-- `outputs.tf`: The file to define outputs from the provisioned resources.
-- `terraform.tfvars`: The file to set the values for the variables defined in `variables.tf`.
+The directory contains the following Terraform configuration files:
+
+- `eip.tf`: Elastic IP (EIP) configuration for provisioning and associating an Elastic IP in AWS.
+- `igw.tf`: Internet Gateway (IGW) configuration for attaching an internet gateway to the VPC.
+- `natgw.tf`: NAT Gateway configuration for enabling outbound internet access for private subnets.
+- `provider.tf`: Provider configuration (e.g., AWS) with credentials and region settings.
+- `rt.tf`: Route Table configuration for managing routing within the VPC.
+- `subnet.tf`: Subnet configuration for creating subnets within the VPC.
+- `vpc.tf`: VPC (Virtual Private Cloud) configuration for defining the network and its CIDR block.
+
+Each file is modular and handles a specific part of the infrastructure setup, helping to organize and manage the Terraform code efficiently.
 
 ## Remote State (Optional)
 
