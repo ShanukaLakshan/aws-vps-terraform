@@ -16,7 +16,7 @@ Before using this project, ensure the following are installed:
 
     ```bash
     git clone https://github.com/ShanukaLakshan/aws-vps-terraform.git
-    cd aws-vps-terraform
+    cd aws-vps-terraform/src
     ```
 
 2. Initialize the Terraform configuration:
@@ -63,3 +63,27 @@ Before using this project, ensure the following are installed:
     ```bash
     terraform destroy
     ```
+
+
+## Directory Structure
+
+- `main.tf`: The main Terraform configuration file defining the resources.
+- `variables.tf`: The file to define variables for your configuration.
+- `outputs.tf`: The file to define outputs from the provisioned resources.
+- `terraform.tfvars`: The file to set the values for the variables defined in `variables.tf`.
+
+## Remote State (Optional)
+
+If you're using remote state (e.g., S3 for AWS), configure the backend by updating the `backend.tf` file.
+
+## Contributing
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a pull request.
+
+## License
+
+This project is licensed under the MIT License.
